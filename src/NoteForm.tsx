@@ -14,7 +14,7 @@ type NoteFormProps = {
 export function NoteForm({onSubmit, onAddTag, availableTags, title = "", markdown = "", tags = [],}: NoteFormProps) {
     const titleRef = useRef<HTMLInputElement>(null)
     const markdownRef = useRef<HTMLTextAreaElement>(null)
-    const [SelectedTags, setSelectedTags] = useState<Tag[]>([tags])
+    const [SelectedTags, setSelectedTags] = useState<Tag[]>(tags)
     const navigate = useNavigate()
 
     function handleSubmit(e: FormEvent) {
